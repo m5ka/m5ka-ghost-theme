@@ -1,0 +1,25 @@
+{{!< default}}
+
+{{#post}}
+<article class="post">
+    {{#if tags}}
+        <ul class="post__tags">
+            {{#foreach tags}}
+                <li class="post__tag"><a href="{{url}}">{{name}}</a></li>
+            {{/foreach}}
+        </ul>
+    {{/if}}
+    {{#match @page.show_title_and_feature_image}}
+        <h2 class="post__heading">{{title}}</h2>
+        {{#if feature_image}}
+            <div class="post__image" style="background-image:url('{{img_url feature_image size="xl"}}')"></div>
+            {{#if feature_image_caption}}
+                <p class="post__caption">{{feature_image_caption}}</p>
+            {{/if}}
+        {{/if}}
+    {{/match}}
+    <section class="post__body">
+        {{content}}
+    </section>
+</article>
+{{/post}}

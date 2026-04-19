@@ -1,0 +1,93 @@
+{
+    "name": "m5ka-ghost-theme",
+    "description": "A Ghost theme for m5ka.dev",
+    "version": "0.0.1",
+    "private": true,
+    "engines": {
+        "ghost": ">=5.0.0"
+    },
+    "license": "BSD-2-Clause",
+    "author": {
+        "name": "m5ka",
+        "email": "m5ka@posteo.de",
+        "url": "https://m5ka.dev"
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
+    "config": {
+        "posts_per_page": 12,
+        "image_sizes": {
+            "xs": {
+                "width": 150
+            },
+            "s": {
+                "width": 300
+            },
+            "m": {
+                "width": 720
+            },
+            "l": {
+                "width": 960
+            },
+            "xl": {
+                "width": 1200
+            },
+            "xxl": {
+                "width": 2000
+            }
+        },
+        "card_assets": true,
+        "custom": {
+            "homepage_heading": {
+                "type": "text",
+                "group": "homepage",
+                "default": "Hi, I'm Maria."
+            },
+            "homepage_subheading": {
+                "type": "text",
+                "group": "homepage",
+                "default": "I'm a software engineer."
+            },
+            "github_url": {
+                "type": "text",
+                "group": "homepage"
+            },
+            "linkedin_url": {
+                "type": "text",
+                "group": "homepage"
+            },
+            "lastfm_username": {
+                "type": "text",
+                "group": "homepage"
+            },
+            "copyright_text": {
+                "type": "text",
+                "default": "© <year> <name>"
+            }
+        }
+    },
+    "scripts": {
+        "dev": "gulp",
+        "test": "gscan .",
+        "zip": "gulp zip"
+    },
+    "devDependencies": {
+        "autoprefixer": "10.5.0",
+        "beeper": "2.1.0",
+        "cssnano": "7.1.5",
+        "gscan": "5.4.3",
+        "gulp": "5.0.1",
+        "gulp-concat": "2.6.1",
+        "gulp-less": "^5.0.0",
+        "gulp-livereload": "4.0.2",
+        "gulp-postcss": "10.0.0",
+        "gulp-uglify": "3.0.2",
+        "gulp-zip": "5.1.0",
+        "ordered-read-streams": "2.0.0",
+        "postcss": "8.5.9",
+        "pump": "3.0.4"
+    }
+}

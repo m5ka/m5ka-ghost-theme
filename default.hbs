@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="{{@site.locale}}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{meta_title page=(t " (Page %)")}}</title>
+        <link rel="stylesheet" href="{{ asset "built/screen.css" }}">
+        {{#is "home"}}
+            {{#if @site.cover_image}}
+                <link rel="preload" as="image" href="{{@site.cover_image}}">
+            {{/if}}
+        {{/is}}
+        {{ghost_head}} 
+    </head>
+    <body class="{{body_class}}">
+        <header class="header">
+            <a href="/" class="header__brand">m5ka<span>.dev</span></a>
+            {{navigation}}
+        </header>
+        {{{body}}}
+        <footer class="footer">
+            <p>made with ♥ in <a target="_blank" rel="noreferrer noopener" href="https://github.com/m5ka/m5ka-ghost-theme">less</a> with <a target="_blank" rel="noreferrer noopener" href="https://docs.ghost.org">ghost</a></p>
+            {{#if @custom.copyright_text}}<p class="footer__copyright">{{@custom.copyright_text}}</p>{{/if}}
+        </footer>
+        <script src="{{ asset "js/main.js" }}"></script>
+        {{ghost_foot}}
+    </body>
+</html>

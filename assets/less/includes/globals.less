@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Libre+Baskerville:ital@0;1&display=swap');
+
+// Colours
+@bg: #242731;
+@fg: #fff;
+@accent: #6faaa3;
+.subtle {
+  color: lighten(@bg, 30%);
+}
+
+// Image filter
+@image-filter: brightness(0.8) sepia(0.8) hue-rotate(170deg);
+
+// Font stacks
+@font-body: 'IBM Plex Mono', Courier New, monospace;
+@font-heading: 'Libre Baskerville', Georgia, Times New Roman, serif;
+
+// Font sizes
+@font-sm: 1.4rem;
+@font-md: 1.6rem;
+@font-lg: 1.8rem;
+@font-hero: 3.8rem;
+
+// Block sizing
+@block-post-maxw: 724px;
+@block-maxw: 960px;
+@block-gutter: 1.6rem;
+.block-base {
+  padding-inline: @block-gutter;
+  margin-inline: auto;
+}
+.block {
+  .block-base();
+  max-width: @block-maxw;
+}
+.block-post {
+  .block-base();
+  max-width: @block-post-maxw;
+}
+
+// Breakpoints
+@sm: ~"(min-width: 576px)";
+@md: ~"(min-width: 768px)";
+@lg: ~"(min-width: 992px)";
+@xl: ~"(min-width: 1200px)";
+
+// Layout helpers
+.stack {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+// Spinning
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
