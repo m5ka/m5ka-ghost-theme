@@ -63,6 +63,10 @@
                 "type": "text",
                 "group": "homepage"
             },
+            "accent_colour": {
+                "type": "color",
+                "default": "#6faaa3"
+            },
             "copyright_text": {
                 "type": "text",
                 "default": "© <year> <name>"
