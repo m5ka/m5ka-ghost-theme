@@ -147,6 +147,31 @@ body {
     .subtle();
   }
 
+  &__toc {
+    .block();
+
+    @media @lg {
+      padding-inline: 1.2rem;
+      margin-inline: 0;
+      max-width: 34rem;
+      position: sticky;
+      top: 3.6rem;
+      height: 1px;
+    }
+
+    &:has(> ol) {
+      margin-block-start: 2.4rem;
+    }
+
+    a {
+      padding-inline-start: 1.4rem;
+    }
+
+    .is-active-link::before {
+      background-color: @accent;
+    }
+  }
+
   &__body {
     .block-post();
     margin-block-start: 2.8rem;
